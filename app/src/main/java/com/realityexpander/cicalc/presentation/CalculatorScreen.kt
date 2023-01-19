@@ -9,10 +9,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
 fun CalculatorScreen(
-    viewModel: CalculatorViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
+    viewModel: CalculatorViewModel = viewModel()
 ) {
     Surface(
         modifier = Modifier.fillMaxSize(),
@@ -26,7 +27,7 @@ fun CalculatorScreen(
                 expression = viewModel.expression,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .weight(1f)
+                    .weight(1f) // display uses leftover space from the button grid
                     .clip(
                         RoundedCornerShape(
                             bottomStart = 25.dp,
@@ -40,6 +41,7 @@ fun CalculatorScreen(
                     )
             )
             Spacer(modifier = Modifier.height(8.dp))
+
             CalculatorButtonGrid(
                 actions = calculatorActions,
                 onAction = viewModel::onAction,
