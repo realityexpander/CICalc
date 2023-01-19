@@ -1,8 +1,8 @@
 package com.realityexpander.cicalc.domain
 
 enum class Operation(val symbol: Char) {
-    ADD('+'),
-    SUBTRACT('-'),
+    PLUS('+'),
+    MINUS('-'),
     MULTIPLY('x'),
     DIVIDE('/'),
     PERCENT('%'),
