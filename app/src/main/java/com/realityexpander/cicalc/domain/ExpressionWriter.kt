@@ -7,9 +7,13 @@ class ExpressionWriter {
     fun processAction(action: CalculatorAction) {
         when(action) {
             CalculatorAction.Calculate -> {
-                val parser = ExpressionParser(prepareForCalculation())
-                val evaluator = ExpressionEvaluator(parser.parse())
-                workExpression = evaluator.evaluate().toString()
+                try {
+                    val parser = ExpressionParser(prepareForCalculation())
+                    val evaluator = ExpressionEvaluator(parser.parse())
+                    workExpression = evaluator.evaluate().toString()
+                } catch (e: Exception) {
+                    workExpression = "Error"
+                }
             }
             CalculatorAction.Clear -> {
                 workExpression = ""
@@ -52,9 +56,13 @@ class ExpressionWriter {
         val closingCount = workExpression.count { it == ')' }
 
         workExpression += when {
+            // Check if the last character is valid for the start of a new expression
             workExpression.isEmpty() ||
                 workExpression.last() in "$operationSymbols(" -> "("
 
+            // Add a closing parentheses if the last character in the expression is a
+            // digit or a closing parentheses and the number of opening parentheses
+            // is equal to the number of closing parentheses
             workExpression.last() in "0123456789)" &&
                     openingCount == closingCount -> return
 
