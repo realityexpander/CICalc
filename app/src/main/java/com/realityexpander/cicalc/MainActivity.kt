@@ -35,6 +35,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DefaultPreview() {
     CICalcTheme {
-        Text(text = "Hello2")
+        Text(text = "Hello World! - try agin")
     }
 }
