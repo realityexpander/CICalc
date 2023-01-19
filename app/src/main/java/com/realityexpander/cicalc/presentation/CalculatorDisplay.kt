@@ -25,12 +25,12 @@ fun CalculatorDisplay(
             value = expression,
             onValueChange = {},
             textStyle = TextStyle(
-                fontSize = 80.sp,
+                fontSize = 50.sp,
                 color = MaterialTheme.colorScheme.onSecondaryContainer,
                 textAlign = TextAlign.End
             ),
-            maxLines = 1,
-            singleLine = true,
+            maxLines = 2,
+            singleLine = false,
             cursorBrush = SolidColor(MaterialTheme.colorScheme.primary),
             readOnly = true,
             modifier = Modifier.fillMaxWidth()

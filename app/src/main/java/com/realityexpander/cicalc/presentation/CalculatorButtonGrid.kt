@@ -26,7 +26,7 @@ fun CalculatorButtonGrid(
             items(actions) { action ->
                 CalculatorButton(
                     action = action,
-                    modifier = Modifier.aspectRatio(1f),
+                    modifier = Modifier.aspectRatio(1f), // makes sure its square for buttons
                     onClick = { onAction(action.action) }
                 )
             }
