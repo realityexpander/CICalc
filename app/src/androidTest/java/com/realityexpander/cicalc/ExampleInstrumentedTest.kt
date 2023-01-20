@@ -23,20 +23,6 @@ class ExampleInstrumentedTest {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
 
         println("BuildConfig.APPLICATION_ID: ${BuildConfig.APPLICATION_ID}")
-        Log.i("HELLO", "useAppContext Log: BuildConfig.APPLICATION_ID: ${BuildConfig.APPLICATION_ID}")
-        Logger.getGlobal().info("useAppContext Logger: BuildConfig.APPLICATION_ID: ${BuildConfig.APPLICATION_ID}")
-
         assertEquals(BuildConfig.APPLICATION_ID, appContext.packageName)
-
-        //  run a bash command
-        val process = Runtime.getRuntime().exec("echo hello > hello.txt")
-        process.waitFor()
-        val output = process.inputStream.bufferedReader().readText()
-        println("output: $output")
-
-        val process2 = Runtime.getRuntime().exec("cat hello.txt")
-        process2.waitFor()
-        val output2 = process2.inputStream.bufferedReader().readText()
-        println("output2: $output2")
     }
 }
