@@ -29,7 +29,7 @@ class ExampleInstrumentedTest {
         assertEquals(BuildConfig.APPLICATION_ID, appContext.packageName)
 
         //  run a bash command
-        val process = Runtime.getRuntime().exec("export MYVAR2=\"goodbye\"")
+        val process = Runtime.getRuntime().exec("echo hello > hello.txt")
         process.waitFor()
         val output = process.inputStream.bufferedReader().readText()
         println("output: $output")
