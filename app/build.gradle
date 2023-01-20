@@ -21,8 +21,20 @@ android {
     }
 
     buildTypes {
+        staging {
+            applicationIdSuffix ".staging"
+            manifestPlaceholders = [app_name: "CICalc-Staging"]
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            applicationIdSuffix ".debug"
+            manifestPlaceholders = [app_name: "CICalc-Debug"]
+            minifyEnabled true
+        }
         release {
-            minifyEnabled false
+            manifestPlaceholders = [app_name: "CICalc"]
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -60,6 +72,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.compose.material3:material3:1.1.0-alpha04'
     implementation 'androidx.compose.material3:material3-window-size-class:1.0.1'
+    implementation 'androidx.core:core-ktx:+'
 
     testImplementation 'androidx.test:core:1.5.0'
     testImplementation 'junit:junit:4.13.2'
