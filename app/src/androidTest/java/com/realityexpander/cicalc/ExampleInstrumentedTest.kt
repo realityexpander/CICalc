@@ -1,12 +1,14 @@
 package com.realityexpander.cicalc
 
+import android.util.Log
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import org.junit.Assert.assertEquals
 
 import org.junit.Test
 import org.junit.runner.RunWith
+import java.util.logging.Logger
 
-import org.junit.Assert.*
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -19,6 +21,8 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.realityexpander.cicalc", appContext.packageName)
+
+        println("BuildConfig.APPLICATION_ID: ${BuildConfig.APPLICATION_ID}")
+        assertEquals(BuildConfig.APPLICATION_ID, appContext.packageName)
     }
 }
