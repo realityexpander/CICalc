@@ -23,6 +23,7 @@ class ExampleInstrumentedTest {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
 
         println("BuildConfig.APPLICATION_ID: ${BuildConfig.APPLICATION_ID}")
+        Log.d("ExampleInstrumentedTest", "BuildConfig.APPLICATION_ID: ${BuildConfig.APPLICATION_ID}")
         assertEquals(BuildConfig.APPLICATION_ID, appContext.packageName)
     }
 }
