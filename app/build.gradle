@@ -14,6 +14,11 @@ android {
         versionCode 1
         versionName "1.0.0"
 
+        manifestPlaceholders = [
+            versionCode: android.defaultConfig.versionCode,
+            versionName: android.defaultConfig.versionName
+        ]
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary true
@@ -23,17 +28,17 @@ android {
     buildTypes {
         staging {
             applicationIdSuffix ".staging"
-            manifestPlaceholders = [app_name: "CICalc-Staging"]
+            manifestPlaceholders += [app_name: "CICalc-Staging"]
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
             //applicationIdSuffix ".debug"
-            manifestPlaceholders = [app_name: "CICalc-Debug"]
+            manifestPlaceholders += [app_name: "CICalc-Debug"]
             minifyEnabled false
         }
         release {
-            manifestPlaceholders = [app_name: "CICalc"]
+            manifestPlaceholders += [app_name: "CICalc"]
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }

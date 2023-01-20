@@ -1,5 +1,6 @@
 package com.realityexpander.cicalc
 
+import android.util.Log
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import org.junit.Assert.assertEquals
@@ -21,6 +22,7 @@ class ExampleInstrumentedTest {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
 
         println("BuildConfig.APPLICATION_ID: ${BuildConfig.APPLICATION_ID}")
+        Log.i("HELLO", "useAppContext: BuildConfig.APPLICATION_ID: ${BuildConfig.APPLICATION_ID}")
 
         assertEquals(BuildConfig.APPLICATION_ID, appContext.packageName)
     }
