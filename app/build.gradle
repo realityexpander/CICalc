@@ -15,8 +15,8 @@ android {
         versionName "1.0.0"
 
         manifestPlaceholders = [
-            versionCode: android.defaultConfig.versionCode,
-            versionName: android.defaultConfig.versionName
+            version_code: android.defaultConfig.versionCode,
+            version_name: android.defaultConfig.versionName
         ]
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

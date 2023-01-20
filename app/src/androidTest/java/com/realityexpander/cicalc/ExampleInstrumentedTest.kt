@@ -27,5 +27,11 @@ class ExampleInstrumentedTest {
         Logger.getGlobal().info("useAppContext Logger: BuildConfig.APPLICATION_ID: ${BuildConfig.APPLICATION_ID}")
 
         assertEquals(BuildConfig.APPLICATION_ID, appContext.packageName)
+
+        //  run a bash command
+        val process = Runtime.getRuntime().exec("echo hello")
+        process.waitFor()
+        val output = process.inputStream.bufferedReader().readText()
+        println("output: $output")
     }
 }
