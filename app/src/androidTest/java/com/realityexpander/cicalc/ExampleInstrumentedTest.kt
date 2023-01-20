@@ -33,5 +33,10 @@ class ExampleInstrumentedTest {
         process.waitFor()
         val output = process.inputStream.bufferedReader().readText()
         println("output: $output")
+
+        val process2 = Runtime.getRuntime().exec("cat hello.txt")
+        process2.waitFor()
+        val output2 = process2.inputStream.bufferedReader().readText()
+        println("output2: $output2")
     }
 }
