@@ -7,6 +7,7 @@ import org.junit.Assert.assertEquals
 
 import org.junit.Test
 import org.junit.runner.RunWith
+import java.util.logging.Logger
 
 
 /**
@@ -22,7 +23,8 @@ class ExampleInstrumentedTest {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
 
         println("BuildConfig.APPLICATION_ID: ${BuildConfig.APPLICATION_ID}")
-        Log.i("HELLO", "useAppContext: BuildConfig.APPLICATION_ID: ${BuildConfig.APPLICATION_ID}")
+        Log.i("HELLO", "useAppContext Log: BuildConfig.APPLICATION_ID: ${BuildConfig.APPLICATION_ID}")
+        Logger.getGlobal().info("useAppContext Logger: BuildConfig.APPLICATION_ID: ${BuildConfig.APPLICATION_ID}")
 
         assertEquals(BuildConfig.APPLICATION_ID, appContext.packageName)
     }
