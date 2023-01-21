@@ -1,0 +1,41 @@
+// REPLACE WITH YOUR OWN google-services.json
+
+{
+    "project_info": {
+    "project_number": "XXXXXX",
+    "project_id": "<YOUR PROJECT ID>",
+    "storage_bucket": "YOUR PROJECT ID.appspot.com"
+},
+    "client": [
+    {
+        "client_info": {
+        "mobilesdk_app_id": "1:XXXXXXXX28:android:0eXXXXXXXXa32d9",
+        "android_client_info": {
+        "package_name": "com.XXXXXXXX"
+    }
+    },
+        "oauth_client": [
+        {
+            "client_id": "XXXXXX58jcfvo4pr.apps.googleusercontent.com",
+            "client_type": 3
+        }
+        ],
+        "api_key": [
+        {
+            "current_key": "XXXXXXX"
+        }
+        ],
+        "services": {
+        "appinvite_service": {
+        "other_platform_oauth_client": [
+        {
+            "client_id": "XXXXX-XXXXXX.apps.googleusercontent.com",
+            "client_type": 3
+        }
+        ]
+    }
+    }
+    }
+    ],
+    "configuration_version": "1"
+}
