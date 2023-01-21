@@ -26,7 +26,7 @@ class ExampleInstrumentedTest {
         assertEquals(BuildConfig.APPLICATION_ID, appContext.packageName)
 
         // run bash to check value of CI env variable
-        val process = Runtime.getRuntime().exec("envman bash echo \$CI")
+        val process = Runtime.getRuntime().exec("envman bash -c echo \$CI")
         val isRunningCI = process.inputStream.bufferedReader().readText()
         println("CI: $isRunningCI")
 
