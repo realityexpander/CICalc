@@ -42,7 +42,7 @@ variant uses a production backend API.
    (Builds DEBUG APK on BitRise and sent to Firebase App Distribution testers)
 4. Switch back to `dev` to make changes. Until ready for another `staging` build.
 5. Switch to `x.x.x/staging`
-6. Select "Merge 'dev' into 'x.x.x/staging'" (from git menu), & Push `x.x.x/staging` branch.
+6. Select `Merge 'dev' into 'x.x.x/staging'` (from git menu), & Push `x.x.x/staging` branch.
    (Builds DEBUG APK on BitRise and sent to Firebase App Distribution testers)
 7. Repeat steps 4-6 until ready to release
 
