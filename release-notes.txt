@@ -1,3 +1,9 @@
+1.0.2
+- trying out the version flow
+
+1.0.1
+- Just testing the build system
+
 1.0.0
 - This is a sample release note
 - This is another sample
