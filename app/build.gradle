@@ -33,7 +33,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
-            //applicationIdSuffix ".debug"
+            applicationIdSuffix ".debug"
             manifestPlaceholders += [app_name: "CICalc-Debug"]
             minifyEnabled false
         }
