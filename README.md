@@ -13,7 +13,7 @@ Google Play Console: https://play.google.com/console/u/0/developers/746616278246
 
 Google Cloud: https://console.cloud.google.com/home/dashboard?project=pc-api-7466162782462237210-872
 
-## Build Pipeline notes
+## Build Pipeline notes for Bitrise
 
 1. **PR** to `dev` branch will trigger a BitRise *UNSIGNED DEBUG* APK build, Run Tests
    and deploy APK to BitRise Artifacts Only
@@ -38,3 +38,5 @@ Note: "Staging" Variant is not used in this project. (even though we are using a
 ### Flow for a new production release:
 1. Create a new PR from `x.x.x/release` to `main` branch 
    (this will create a new build *SIGNED RELEASE* AAB on BitRise and deploy to Play Store production track)
+2. Merge PR to `main` branch (and possibly delete `x.x.x/release` branch)
+3. Merge `main` branch to `dev` branch
