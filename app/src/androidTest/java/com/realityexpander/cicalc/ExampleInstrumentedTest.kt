@@ -40,7 +40,7 @@ class ExampleInstrumentedTest {
             println(result)
         }
 
-        // return success
+        // force return success
         assertEquals(4, 2 + 2)
     }
 }
