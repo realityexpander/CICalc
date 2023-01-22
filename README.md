@@ -54,7 +54,6 @@ Note: `dev` means `origin/dev` branch, `x.x.x/staging` means `origin/x.x.x/stagi
 3. Create a new PR from `x.x.x/release` to `main` branch
    (Builds *SIGNED RELEASE* AAB on BitRise and deploys to Play Store production track, puts under review)
 4. Merge PR to `main` branch (and possibly delete `x.x.x/staging` branch)
-5. Manually Merge `main` branch to `dev` branch
 
 Notes:
 - `dev` branch is the default branch for this repo
