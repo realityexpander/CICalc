@@ -56,7 +56,7 @@ Note: `dev` means `origin/dev` branch, `x.x.x/staging` means `origin/x.x.x/stagi
 4. Merge PR to `main` branch (and possibly delete `x.x.x/staging` branch)
 
 Notes:
-- `dev` branch is the default branch for this repo
+- `dev` branch is the development branch for this repo
 - `main` branch is the production branch for this repo
 - `x.x.x/staging` branch is the staging branch for this repo (for testing releases)
 - `x.x.x/release` branch is the release branch for this repo (for production releases)
