@@ -1,5 +1,5 @@
 1.0.2
--
+- trying out the version flow
 
 1.0.1
 - Just testing the build system
