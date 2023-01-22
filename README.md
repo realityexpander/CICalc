@@ -40,14 +40,16 @@ variant uses a production backend API.
 2. Modify `release-notes.txt` and `whatsnew` folder with release notes.
 3. Push `x.x.x/staging` branch to trigger a BitRise build for an *UNSIGNED DEBUG* APK
    (Builds DEBUG APK on BitRise and sent to Firebase App Distribution testers)
-4. Make changes on `dev` and Rebase `dev` onto `x.x.x/staging` branch, & Push `x.x.x/staging` branch
-5. Repeat steps 2-4 until ready to release
+4. Switch to `dev` to make changes. Until ready for another `staging` build.
+5. Switch to `x.x.x/staging` 
+6. Select "Merge 'dev' into 'x.x.x/staging'" from git menu, & Push `x.x.x/staging` branch.
+7. Repeat steps 2-4 until ready to release
 
 ### Flow for a new production release:
 1. Create a new `x.x.x/release` branch from `dev` branch
 2. Create a new PR from `x.x.x/release` to `main` branch
    (Builds *SIGNED RELEASE* AAB on BitRise and deploys to Play Store production track, puts under review)
-3. Merge PR to `main` branch (and possibly delete `x.x.x/release` branch)
+3. Merge PR to `main` branch (and possibly delete `x.x.x/staging` branch)
 4. Merge `main` branch to `dev` branch
 
 SOME EXTRA STUFF
