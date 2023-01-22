@@ -1,0 +1,4 @@
+1.0.0
+- This is a sample release note
+- This is another sample
+- More release notes
