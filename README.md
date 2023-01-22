@@ -25,9 +25,9 @@ Google Cloud: https://console.cloud.google.com/home/dashboard?project=pc-api-746
 Note: `staging` Variant is not used in this project.
 (even though we are using a `staging`branch to deploy to Firebase App Distribution)
 
-TODO: Use a `staging` branch for `staging` workflow, and build a *SIGNED RELEASE* AAB for
-Firebase App Distribution. The `staging` variant uses a staging backend API, and the `release`
-variant uses a production backend API.
+TODO: Use the `staging` variant to create a signed-aab for Firebase App Distribution to testers. 
+
+The `staging` variant uses a staging/UAT backend API endpoint, and the `release` variant uses a production endpoint.
 
 Note: `dev` means `origin/dev` branch, `x.x.x/staging` means `origin/x.x.x/staging` branch, etc.
 
