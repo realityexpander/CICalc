@@ -25,20 +25,20 @@ class ExampleInstrumentedTest {
         Log.d("ExampleInstrumentedTest", "BuildConfig.APPLICATION_ID: ${BuildConfig.APPLICATION_ID}")
         assertEquals(BuildConfig.APPLICATION_ID, appContext.packageName)
 
-        // run bash to check value of CI env variable
-        val process = Runtime.getRuntime().exec("envman bash -c echo \$CI")
-        val isRunningCI = process.inputStream.bufferedReader().readText()
-        println("CI: $isRunningCI")
-
-        if(isRunningCI == "true") {
-            println("CI is true")
-
-            val process = Runtime.getRuntime()
-                .exec("envman add --key APPLICATION_ID --value \"${BuildConfig.APPLICATION_ID}\"")
-            val inputStream = process.inputStream
-            val result = inputStream.bufferedReader().use { it.readText() }
-            println(result)
-        }
+//        // run bash to check value of CI env variable
+//        val process = Runtime.getRuntime().exec("envman bash -c echo \$CI")
+//        val isRunningCI = process.inputStream.bufferedReader().readText()
+//        println("CI: $isRunningCI")
+//
+//        if(isRunningCI == "true") {
+//            println("CI is true")
+//
+//            val process = Runtime.getRuntime()
+//                .exec("envman add --key APPLICATION_ID --value \"${BuildConfig.APPLICATION_ID}\"")
+//            val inputStream = process.inputStream
+//            val result = inputStream.bufferedReader().use { it.readText() }
+//            println(result)
+//        }
 
         // force return success
         assertEquals(4, 2 + 2)
