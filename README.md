@@ -45,7 +45,9 @@ variant uses a production backend API.
 
 ### Flow for a new production release:
 1. Create a new `x.x.x/release` branch from `dev` branch
-1. Create a new PR from `x.x.x/release` to `main` branch
+2. Create a new PR from `x.x.x/release` to `main` branch
    (Builds *SIGNED RELEASE* AAB on BitRise and deploys to Play Store production track, puts under review)
-2. Merge PR to `main` branch (and possibly delete `x.x.x/release` branch)
-3. Merge `main` branch to `dev` branch
+3. Merge PR to `main` branch (and possibly delete `x.x.x/release` branch)
+4. Merge `main` branch to `dev` branch
+
+SOME EXTRA STUFF
