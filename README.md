@@ -22,3 +22,4 @@ and deploy to Play Store production track
 
 _TODO_: Push to `*.*.*/staging-release` branch will trigger a *RELEASE* build on Bitrise and deploy to Firebase App Distribution
 
+Note: "Staging" Variant is not used in this project. (even though we are using a `staging` branch to deploy to Firebase App Distribution)
