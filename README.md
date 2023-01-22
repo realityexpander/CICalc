@@ -61,6 +61,14 @@ Notes:
 - `x.x.x/staging` branch is the staging branch for this repo (for testing releases)
 - `x.x.x/release` branch is the release branch for this repo (for production releases)
 - `x.x.x/feature/XXXXXX` branch is the feature branch for this repo (for new features)
+  - /feature/XXXXXX is the Github Issue # or Notion task # for the feature
+  - /fix/XXXXXX is the Github Issue # or Notion task # for the bug fix
+  - /hotfix/XXXXXX is the Github Issue # or Notion task # for the hotfix
+  - /chore/XXXXXX is the Github Issue # or Notion task # for the chore
+  - /refactor/XXXXXX is the Github Issue # or Notion task # for the refactor
+  - /test/XXXXXX is the Github Issue # or Notion task # for the test
+  - /docs/XXXXXX is the Github Issue # or Notion task # for the docs
+  - /misc/XXXXXX is the Github Issue # or Notion task # for the misc
 - `x.x.x` is the version number for this repo (e.g. `1.0.0`)
 
 
