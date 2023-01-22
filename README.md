@@ -55,3 +55,16 @@ Note: `dev` means `origin/dev` branch, `x.x.x/staging` means `origin/x.x.x/stagi
    (Builds *SIGNED RELEASE* AAB on BitRise and deploys to Play Store production track, puts under review)
 4. Merge PR to `main` branch (and possibly delete `x.x.x/staging` branch)
 5. Manually Merge `main` branch to `dev` branch
+
+Notes:
+- `dev` branch is the default branch for this repo
+- `main` branch is the production branch for this repo
+- `x.x.x/staging` branch is the staging branch for this repo (for testing releases)
+- `x.x.x/release` branch is the release branch for this repo (for production releases)
+- `x.x.x/feature/XXXXXX` branch is the feature branch for this repo (for new features)
+- `x.x.x` is the version number for this repo (e.g. `1.0.0`)
+
+The "Build Number" on BitRise is the same as "Version Code" in Gradle which is the same
+as "Latest Version" in Play Store.
+
+The "Version Name" on BitRise is the same as "Release" in Play Store.
