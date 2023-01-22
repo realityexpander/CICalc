@@ -22,7 +22,12 @@ Google Cloud: https://console.cloud.google.com/home/dashboard?project=pc-api-746
 3. **PR** from `*.*.*/release` to `main` branch will trigger a Bitrise build for a *SIGNED RELEASE* AAB 
    and deploy to Play Store Production track
 
-Note: "Staging" Variant is not used in this project. (even though we are using a `staging` branch to deploy to Firebase App Distribution)
+Note: `staging` Variant is not used in this project. 
+(even though we are using a `staging`branch to deploy to Firebase App Distribution)
+
+TODO: Use a `staging` branch for `staging` workflow, and build a *SIGNED RELEASE* AAB for 
+Firebase App Distribution. The `staging` variant uses a staging backend API, and the `release` 
+variant uses a production backend API.
 
 ### Flow for a new feature:
 1. Create a new `x.x.x/feature` branch from `dev` branch
