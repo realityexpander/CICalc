@@ -29,6 +29,8 @@ TODO: Use a `staging` branch for `staging` workflow, and build a *SIGNED RELEASE
 Firebase App Distribution. The `staging` variant uses a staging backend API, and the `release`
 variant uses a production backend API.
 
+Note: `dev` means `origin/dev` branch, `x.x.x/staging` means `origin/x.x.x/staging` branch, etc.
+
 ### Flow for a new feature:
 1. Create a new `x.x.x/feature` branch from `dev` branch
 2. Create a PR from new `x.x.x/feature` branch to `dev` branch
