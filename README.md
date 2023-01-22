@@ -53,5 +53,3 @@ variant uses a production backend API.
    (Builds *SIGNED RELEASE* AAB on BitRise and deploys to Play Store production track, puts under review)
 4. Merge PR to `main` branch (and possibly delete `x.x.x/staging` branch)
 5. Manually Merge `main` branch to `dev` branch
-
-SOME EXTRA STUFF
