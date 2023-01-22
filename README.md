@@ -68,3 +68,5 @@ The "Build Number" on BitRise is the same as "Version Code" in Gradle which is t
 as "Latest Version" in Play Store.
 
 The "Version Name" on BitRise is the same as "Release" in Play Store.
+
+Play Store Release Summary "Version" is BitRise "Build Number" + Gradle "Version Name" e.g. 76(1.0.2)
