@@ -36,21 +36,22 @@ variant uses a production backend API.
 3. Merge PR to `dev` branch (and possibly delete `x.x.x/feature` branch)
 
 ### Flow for a new test release:
-1. Create a new `x.x.x/staging` branch from `dev` branch
-2. Modify `release-notes.txt` and `whatsnew` folder with release notes.
+1. On `dev`, modify `release-notes.txt` and `whatsnew` folder with release notes for the x.x.x release.
+2. Create a new `x.x.x/staging` branch from `dev` branch
 3. Push `x.x.x/staging` branch to trigger a BitRise build for an *UNSIGNED DEBUG* APK
    (Builds DEBUG APK on BitRise and sent to Firebase App Distribution testers)
-4. Switch to `dev` to make changes. Until ready for another `staging` build.
-5. Switch to `x.x.x/staging` 
-6. Select "Merge 'dev' into 'x.x.x/staging'" from git menu, & Push `x.x.x/staging` branch.
+4. Switch back to `dev` to make changes. Until ready for another `staging` build.
+5. Switch to `x.x.x/staging`
+6. Select "Merge 'dev' into 'x.x.x/staging'" (from git menu), & Push `x.x.x/staging` branch.
    (Builds DEBUG APK on BitRise and sent to Firebase App Distribution testers)
-7. Repeat steps 2-4 until ready to release
+7. Repeat steps 4-6 until ready to release
 
 ### Flow for a new production release:
-1. Create a new `x.x.x/release` branch from `dev` branch
-2. Create a new PR from `x.x.x/release` to `main` branch
+1. Bump the `versionName` in `build.gradle` file to match the `x.x.x` version of the `x.x.x/staging` branch
+2. Create a new `x.x.x/release` branch from `dev` branch
+3. Create a new PR from `x.x.x/release` to `main` branch
    (Builds *SIGNED RELEASE* AAB on BitRise and deploys to Play Store production track, puts under review)
-3. Merge PR to `main` branch (and possibly delete `x.x.x/staging` branch)
-4. Merge `main` branch to `dev` branch
+4. Merge PR to `main` branch (and possibly delete `x.x.x/staging` branch)
+5. Manually Merge `main` branch to `dev` branch
 
 SOME EXTRA STUFF
