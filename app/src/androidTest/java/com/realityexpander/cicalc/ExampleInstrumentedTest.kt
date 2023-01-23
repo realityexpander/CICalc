@@ -33,11 +33,11 @@ class ExampleInstrumentedTest {
 //        if(isRunningCI == "true") {
 //            println("CI is true")
 //
-//            val process = Runtime.getRuntime()
-//                .exec("envman add --key APPLICATION_ID --value \"${BuildConfig.APPLICATION_ID}\"")
-//            val inputStream = process.inputStream
-//            val result = inputStream.bufferedReader().use { it.readText() }
-//            println(result)
+            val process = Runtime.getRuntime()
+                .exec("envman add --key APPLICATION_ID --value \"${BuildConfig.APPLICATION_ID}\"")
+            val inputStream = process.inputStream
+            val result = inputStream.bufferedReader().use { it.readText() }
+            println(result)
 //        }
 
         // force return success
