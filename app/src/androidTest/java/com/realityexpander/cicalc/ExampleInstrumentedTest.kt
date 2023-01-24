@@ -41,6 +41,7 @@ class ExampleInstrumentedTest {
 //        }
 
         // force return success
+        // force update
         assertEquals(4, 2 + 2)
     }
 }
