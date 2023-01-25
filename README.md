@@ -77,3 +77,14 @@ as `Latest Version` in Play Store.
 - The `Release` in Play Store is the same as `Version Name` on BitRise/Gradle.
 - The `Version Code` in Play Store is the same as `Build Number` on BitRise.
 - Play Store Release Summary `Version` is BitRise `Build Number` + Gradle `Version Name` e.g. 76(1.0.2)
+
+
+## Build Locally
+1. run `brew install bitrise`
+2. make a clean clone of repo:
+3. `take ~/dev/cicalc-clean-clone`
+4. `git clone https://github.com/realityexpander/cicalc.git`
+5. Get the `bitrise.yml` file from BitRise and put it in the root of the repo
+6. `bitrise setup` to setup BitRise CLI & associated tools
+7. `bitrise workflows` to list available workflows
+6. `bitrise run <Workflow>` to run primary workflow
