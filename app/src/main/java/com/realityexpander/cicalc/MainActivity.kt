@@ -1,5 +1,6 @@
 package com.realityexpander.cicalc
 
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -41,9 +42,19 @@ class MainActivity : ComponentActivity() {
 }
 
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, group = "light")
 @Composable
 fun DefaultPreview() {
+    CICalcTheme {
+        CalculatorScreen()
+    }
+}
+
+@Preview(showBackground = true,
+    uiMode = Configuration.UI_MODE_NIGHT_YES or Configuration.UI_MODE_TYPE_NORMAL, group = "dark"
+)
+@Composable
+fun DarkPreview() {
     CICalcTheme {
         CalculatorScreen()
     }
