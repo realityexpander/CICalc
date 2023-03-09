@@ -53,6 +53,9 @@ class ExampleInstrumentedTest {
         // Write the output to a app directory
         val file = File(appContext.cacheDir, "/tempTestDir/test.txt")
         file.writeText("Hello World!")
+
+        println("XXX Hello World!")
+        println("XXX file: ${file.absolutePath}")
     }
 }
 
