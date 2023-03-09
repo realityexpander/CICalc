@@ -47,11 +47,11 @@ class ExampleInstrumentedTest {
 
 
         // Create a temp directory
-        val tempDir = File(appContext.filesDir, "/tempTestDir")
+        val tempDir = File(appContext.cacheDir, "/tempTestDir")
         tempDir.mkdirs()
-        
+
         // Write the output to a app directory
-        val file = File(appContext.filesDir, "/tempTestDir/test.txt")
+        val file = File(appContext.cacheDir, "/tempTestDir/test.txt")
         file.writeText("Hello World!")
     }
 }
