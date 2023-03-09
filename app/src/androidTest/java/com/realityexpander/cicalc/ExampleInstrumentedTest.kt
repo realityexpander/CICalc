@@ -7,6 +7,7 @@ import org.junit.Assert.assertEquals
 
 import org.junit.Test
 import org.junit.runner.RunWith
+import java.io.File
 
 
 /**
@@ -43,6 +44,15 @@ class ExampleInstrumentedTest {
         // force return success
         // force update
         assertEquals(4, 2 + 2)
+
+
+        // Create a temp directory
+        val tempDir = File(appContext.filesDir, "/tempTestDir")
+        tempDir.mkdirs()
+        
+        // Write the output to a app directory
+        val file = File(appContext.filesDir, "/tempTestDir/test.txt")
+        file.writeText("Hello World!")
     }
 }
 
