@@ -55,3 +55,6 @@ Note: `dev` means `origin/dev` branch, `x.x.x/staging` means `origin/x.x.x/stagi
    (Builds *SIGNED RELEASE* AAB on BitRise and deploys to Play Store production track, puts under review)
 4. Merge PR to `main` branch (and possibly delete `x.x.x/staging` branch)
 5. Manually Merge `main` branch to `dev` branch
+
+Bitrise AVD Testing Results Download issue:
+https://support.bitrise.io/hc/en-us/requests/35460?page=1
