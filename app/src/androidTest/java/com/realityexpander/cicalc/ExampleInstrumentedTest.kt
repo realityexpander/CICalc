@@ -7,6 +7,7 @@ import org.junit.Assert.assertEquals
 
 import org.junit.Test
 import org.junit.runner.RunWith
+import java.io.File
 
 
 /**
@@ -16,6 +17,7 @@ import org.junit.runner.RunWith
  */
 @RunWith(AndroidJUnit4::class)
 class ExampleInstrumentedTest {
+
     @Test
     fun useAppContext() {
         // Context of the app under test.
@@ -43,6 +45,18 @@ class ExampleInstrumentedTest {
         // force return success
         // force update
         assertEquals(4, 2 + 2)
+
+
+        // Create a temp directory
+        val tempDir = File(appContext.cacheDir, "/tempTestDir")
+        tempDir.mkdirs()
+
+        // Write the output to a app directory
+        val file = File(appContext.cacheDir, "/tempTestDir/test.txt")
+        file.writeText("Hello World!")
+
+        println("XXX Hello World!")
+        println("XXX file: ${file.absolutePath}")
     }
 }
 

@@ -88,3 +88,11 @@ as `Latest Version` in Play Store.
 6. `bitrise setup` to setup BitRise CLI & associated tools
 7. `bitrise workflows` to list available workflows
 6. `bitrise run <Workflow>` to run primary workflow
+
+## Sample Script for BitRise
+```
+echo "Application ID:"
+envman run bash -c 'echo "Environment test: $APPLICATION_ID"'
+tree app/build
+```
+
