@@ -15,8 +15,12 @@ Google Cloud: https://console.cloud.google.com/home/dashboard?project=pc-api-746
 
 ## Build Pipeline notes for Bitrise
 
+Here are the different build pipelines for this project:
+
 1. **PR** to `dev` branch will trigger a BitRise *UNSIGNED DEBUG* APK build, Run Tests
-   and deploy APK to BitRise Only under "Artifacts" tab
+   and deploy APK to BitRise Only under "Artifacts" tab.
+
+   <i>Note: Any pushes to `dev` branch will trigger a new build.</i> 
 2. **Push** to `*.*.*/staging` branch will trigger a BitRise build for an *UNSIGNED DEBUG* APK
    and deploy APK to Firebase App Distribution testers
 3. **PR** from `*.*.*/release` to `main` branch will trigger a Bitrise build for a *SIGNED RELEASE* AAB
@@ -47,6 +51,16 @@ Note: `dev` means `origin/dev` branch, `x.x.x/staging` means `origin/x.x.x/stagi
 6. Select `Merge 'dev' into 'x.x.x/staging'` (from git menu), & Push `x.x.x/staging` branch.
    (Builds DEBUG APK on BitRise and sent to Firebase App Distribution testers)
 7. Repeat steps 4-6 until ready to release
+
+### Flow for a new `Internal App Sharing` release:
+1. Log in to developer [console: https://play.google.com/console](https://play.google.com/console/u/2/developers/7466162782462237210/app/4975920456690565880/releases/internal-app-sharing?tab=internalSharing)
+2. Build an APK like normal.
+3. Upload APK to [here: https://play.google.com/console/u/2/internal-app-sharing](https://play.google.com/console/u/2/internal-app-sharing?pli=1)
+4. Users must turn on developer mode (Settings > About phone > tap Build number 7x) to install the app.
+5. Users must turn on `Internal App Sharing` in their Developer settings to install the app.
+6. Users must be on the email list to download the app.
+7. Users can download the app from the link in the email.
+
 
 ### Flow for a new production release:
 1. Bump the `versionName` in `build.gradle` file to match the `x.x.x` version of the `x.x.x/staging` branch

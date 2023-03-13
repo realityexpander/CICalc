@@ -12,7 +12,7 @@ android {
         minSdk 28
         targetSdk 33
         versionCode 1
-        versionName "1.0.3"
+        versionName "1.0.4"
 
         manifestPlaceholders = [
             version_code: android.defaultConfig.versionCode,
@@ -77,6 +77,9 @@ dependencies {
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.compose.material3:material3:1.1.0-alpha04'
     implementation 'androidx.compose.material3:material3-window-size-class:1.0.1'
+
+    implementation "com.google.android.play:review-ktx:$play_review_version"
+    implementation "com.google.android.play:review:$play_review_version"
 
     testImplementation 'androidx.test:core:1.5.0'
     testImplementation 'junit:junit:4.13.2'

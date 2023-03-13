@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import com.google.android.play.core.review.ReviewManagerFactory
 import com.realityexpander.cicalc.config.ApplicationConfig
 import com.realityexpander.cicalc.presentation.CalculatorScreen
 import com.realityexpander.cicalc.ui.theme.CICalcTheme
@@ -20,6 +21,7 @@ import com.realityexpander.cicalc.ui.theme.CICalcTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContent {
             CICalcTheme {
                 // A surface container using the 'background' color from the theme
@@ -27,7 +29,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    CalculatorScreen()
+                    CalculatorScreen(
+                        onShowFeedbackDialog = ::showFeedbackDialog
+                    )
 
                     if(BuildConfig.DEBUG) {
                         Column {
@@ -36,6 +40,16 @@ class MainActivity : ComponentActivity() {
                         }
                     }
                 }
+            }
+        }
+    }
+
+    private fun showFeedbackDialog() {
+        val reviewManager = ReviewManagerFactory.create(this)
+        reviewManager.requestReviewFlow().addOnCompleteListener { request ->
+            if (request.isSuccessful) {
+                val reviewInfo = request.result
+                reviewManager.launchReviewFlow(this, reviewInfo)
             }
         }
     }
