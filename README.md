@@ -58,3 +58,8 @@ Note: `dev` means `origin/dev` branch, `x.x.x/staging` means `origin/x.x.x/stagi
 
 Bitrise AVD Testing Results Download issue:
 https://support.bitrise.io/hc/en-us/requests/35460?page=1
+sample build: https://app.bitrise.io/build/fa106b7b-b550-4fcb-84a1-5457db45c873
+https://devcenter.bitrise.io/en/testing/exporting-to-test-reports-from-any-step.html
+https://medium.com/stepstone-tech/using-bitrise-continuous-integration-for-android-ui-tests-3b064d4da69b
+https://devcenter.bitrise.io/en/builds/managing-build-files/build-artifacts-online.html#deploying-files-into-artifacts
+https://discuss.bitrise.io/t/add-support-for-adding-log-other-files-for-test-reports-add-on/9494
